@@ -1,0 +1,4 @@
+node_modules/
+*.log
+scratch_dashboard.py
+data/

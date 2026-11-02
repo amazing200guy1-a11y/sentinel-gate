@@ -1,0 +1,23 @@
+{
+  "name": "sentinel-gate",
+  "version": "1.0.0",
+  "description": "Hardened Zero-Trust API Security Gateway & Agentic Defense Middleware for Frontier AI Infrastructure",
+  "main": "src/gateway.js",
+  "scripts": {
+    "start": "node src/gateway.js",
+    "test": "node test/sentinel.test.js",
+    "benchmark": "node test/benchmark.js"
+  },
+  "keywords": [
+    "zero-trust",
+    "ai-gateway",
+    "api-security",
+    "mcp",
+    "prompt-injection",
+    "nist-800-207",
+    "agentic-ai",
+    "owasp-llm"
+  ],
+  "author": "Usman Bamidele",
+  "license": "MIT"
+}
