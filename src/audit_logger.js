@@ -119,6 +119,14 @@ class AuditLedger {
     };
   }
 
+  verifyChain() {
+    return this.verifyChainIntegrity().intact;
+  }
+
+  getChain() {
+    return this.entries.slice(0, 100);
+  }
+
   getTelemetry() {
     const total = this.passedCount + this.blockedCount;
     return {
