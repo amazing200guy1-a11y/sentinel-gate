@@ -112,6 +112,27 @@ Sub-2 ms overhead at p99 means SentinelGate adds negligible latency to any LLM i
 
 ---
 
+## Live Dashboard
+
+The dashboard is a three-page cockpit that connects to the running gateway via **Server-Sent Events** — every gateway decision streams to the browser in real-time.
+
+| Page | What It Shows |
+|------|--------------|
+| **Cockpit** | 9-attack simulator (each button POSTs a real attack), live event feed, 4 stat cards, p50/p95/p99 latency bar |
+| **Audit Chain** | Full SHA-256 hash chain rendered entry-by-entry, INTACT/COMPROMISED banner, auto-polls every 3s |
+| **Architecture** | 5-layer pipeline diagram, live `/health` polling, OWASP LLM Top 10 coverage table |
+
+Start the gateway, then open `dashboard.html` in a browser:
+
+```bash
+node src/gateway.js
+# open dashboard.html
+```
+
+The connection status bar shows **CONNECTED** (live feed active) or **OFFLINE** (gateway not running). The page renders fully in offline mode with `--` placeholders.
+
+---
+
 ## Quick Start
 
 ```bash
